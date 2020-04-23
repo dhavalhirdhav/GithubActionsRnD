@@ -1,6 +1,5 @@
-.gitignore
-*/.gitignore      # ignore files in sub directories
-*/.github
+.github/
 .git-ftp-ignore
+.git-ftp.log
 LICENSE
 README.md
