@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     #Deploy on FTP
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
@@ -30,7 +30,7 @@ jobs:
         # FTP account username
         ftp-username: "ghub"
         # FTP account password
-        ftp-password: "ghub"
+        ftp-password: ${{ secrets.HRDV_FTP_SECRET }}
         # The local folder to copy, defaults to root project folder
         local-dir: # optional
         # Passes through options into git-ftp
